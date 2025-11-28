@@ -7,8 +7,6 @@ import './style.css'
 
 function TableComponent({ storeData }){
 
-
-    
     return(
         <div>
             <table  className = "Table-content" >

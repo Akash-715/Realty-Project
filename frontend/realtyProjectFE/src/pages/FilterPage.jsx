@@ -7,6 +7,13 @@ import axios from 'axios';
 
 import TableComponent from './Components/TableComponent';
 import Pagination from './Components/Pagination';
+import PriceComponent from './Components/PriceComponent';
+import LocationComponent from './Components/LocationComponent';
+import PPsqftComponent from './Components/PPsqftCompnent';
+import AreasqftComponent from './Components/AreasqftComponent';
+import SourceComponent from './Components/SourceComponent';
+import ReraComponent from './Components/ReraComponent';
+import BsComponent from './Components/BsComponent';
 
 
 
@@ -30,7 +37,8 @@ function FilterPage(){
         PPsqFt: false,
         area: false,
         source: false,
-        rera: false
+        rera: false,
+        bs: false
     });
 
 
@@ -47,7 +55,8 @@ function FilterPage(){
         maxPP:"",
         minAreaSqFt:"",
         maxAreaSqFt:"",
-        reraValue: ""
+        reraValue: "",
+        buildingStatus: ""
     })
 
     const [storeData , setStoreData] = useState([]);
@@ -105,7 +114,7 @@ function FilterPage(){
             console.log(e);
     }
 }
-
+        //Pagination logic
         const LastRowIndex = currentPage * rowsPerPage;
         const FirstRowIndex = LastRowIndex - rowsPerPage;
         const currentRows = storeData.slice(FirstRowIndex , LastRowIndex);
@@ -118,110 +127,30 @@ function FilterPage(){
                 <div className='Filter_field'>
                     <p>Filter By Fields</p>
 
-                    {/* Price Field */}
-                    <input type='checkbox' id = 'priceInputs'  onChange={() => enableFilters('price')}/>
-                    <label htmlFor='priceInputs'>Price</label> <br />
+                    
+                <PriceComponent  enableFilters={enableFilters} showFilters={showFilters}
+                handleFilters={handleFilters} filters={filters} />
 
-                {showFilters.price &&(
-                    <div className='PriceRange'>
-                        <label>Enter Price Range</label> <br />
-                        <div className='RangeInputs'>
+                <LocationComponent enableFilters={enableFilters} options={options} 
+                selectedOption={selectedOption} showFilters={showFilters} 
+                setSelectedOption={setSelectedOption} />
 
-                        <input name='minValue' type='number' id = 'priceInputs' onChange={handleFilters} value={filters.minValue} placeholder='Min'></input>
-                        <span id='dash'>-</span>
-                        <input name='maxValue' type = 'number' id = 'priceInputs' onChange={handleFilters} value={filters.maxValue} placeholder='Max'></input>
+                <PPsqftComponent enableFilters={enableFilters} showFilters={showFilters}
+                filters={filters} handleFilters={handleFilters} />
 
-                        </div>
+                <AreasqftComponent enableFilters={enableFilters} showFilters={showFilters}
+                filters={filters} handleFilters={handleFilters} />
 
-                    </div>
-                )}
+                <SourceComponent enableFilters={enableFilters} sourceOptions={sourceOptions}
+                source={source} setSource={setSource} showFilters={showFilters} />
 
-                {/* Location Field */}
-                <input type='checkbox' id= 'locationInputs' onChange={() => enableFilters('location')} />
-                <label htmlFor='locationInputs'>Location </label> <br />
+                <ReraComponent enableFilters={enableFilters} showFilters={showFilters}
+                filters={filters} setFilters={setFilters} />
 
-                {showFilters.location &&(
-                    <div className='locationFields'>
-                        <Select 
-                        options = {options}
-                        value = {selectedOption}
-                        onChange={setSelectedOption}
-                        placeholder = 'Select a Location'
-                        isClearable
-                        isSearchable
-                        />
-                     </div>
+                <BsComponent enableFilters={enableFilters} showFilters={showFilters}
+                setFilters={setFilters} />
 
-                )}
-
-                {/* ppSqFt Field */}
-                <input type= 'checkbox' id = 'ppsqftInput' onChange={() => enableFilters('PPsqFt')} />
-                <label htmlFor='ppsqftInput'>Price per sqft</label> <br />
-
-                {showFilters.PPsqFt && (
-                    <div className='ppsqftRange'>
-                        <label>Enter Price per sqft range</label>
-                        <div className='RangeInputs'>
-
-                        <input name='minPP' type='number' id = 'ppsqftInputs' onChange={handleFilters} value={filters.minPP} placeholder='Min'></input>
-                        <span id='dash'>-</span>
-                        <input name='maxPP' type = 'number' id = 'ppsqftInputs' onChange={handleFilters} value={filters.maxPP} placeholder='Max'></input>  
-
-                        </div>
-                    </div>
-                )}
-
-                {/* areaSqFt Field */}
-
-                <input type = 'checkbox' id = 'areaInput' onChange={() => enableFilters('area')} />
-                <label htmlFor='areaInput'>Total Area sqft</label> <br />
-
-                {showFilters.area && (
-                <div className='AreaInput'>
-                        <label>Enter Total Area sqft range</label>
-                        
-                    <div className='AreaRange'>
-                            
-                        <input name='minAreaSqFt' type='number' id = 'areaInputs' onChange={handleFilters} value={filters.minAreaSqFt} placeholder='Min sqft'></input>
-                        <span id='dash'>-</span>
-                        <input name='maxAreaSqFt' type = 'number' id = 'areaInputs' onChange={handleFilters} value={filters.maxAreaSqFt} placeholder='Max sqft'></input> 
-
-                    </div>
-                </div>
-                )}
-
-                {/*Source Field*/}
-                <input type='checkbox' id='sourceInput' onChange={() => enableFilters('source')} />
-                <label htmlFor='source'>Source</label> <br />
-
-                {showFilters.source && (
-                    <div className='SourceInput'>
-                        <Select
-                        options={sourceOptions}
-                        value={source}
-                        onChange={setSource}
-                        placeholder = "Select a Source"
-                        isClearable
-                        isSearchable
-                        />
-                    </div>
-                )}
-
-                {/*Rera Field*/}
-                <input type='checkbox' id='reraInput' onChange={() => enableFilters('rera')} />
-                <label htmlFor='rera'>Rera Status</label>
-
-                {showFilters.rera && (
-                    <div className='reraInput'>
-                    <input type='checkbox' checked = {filters.reraValue === "yes"} 
-                    onChange={(e) => setFilters(prev => ({
-                        ...prev,
-                        reraValue: e.target.checked ? "yes" : "no"
-                    }))} />
-                    <label htmlFor='rera'>Yes</label>
-                    </div>
-                )}
-
+                {/* Submit Button */}
                 <div className='buttonDiv'>
                     <button variant = 'primary' onClick={handleClick}>Apply Filter</button>
                 </div>
@@ -229,7 +158,6 @@ function FilterPage(){
                 </div>
 
             </div>
-
 
             <div className='Table_block'>
                 {storeData.length > 0 ?(

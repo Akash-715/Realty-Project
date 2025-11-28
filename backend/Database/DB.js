@@ -62,6 +62,13 @@ export async function filter(filters){
         params.push(`%${filters.reraValue}%`);
     }
 
+    //Building Status
+    if(filters.buildingStatus){
+        query += 'AND BuildingStatus like ?';
+
+        params.push(`%${filters.buildingStatus}%`);
+    }
+
     const [rows] = await pool.query(query , params);
     return rows;
 }
