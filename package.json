@@ -1,0 +1,24 @@
+{
+  "name": "realtyscrapper",
+  "version": "1.0.0",
+  "description": "A scrapper that scrapes details of listings in various Realty websites",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "json2csv": "^6.0.0-alpha.2",
+    "mysql2": "^3.14.1",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10",
+    "puppeteer": "^24.4.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "tesseract.js": "^6.0.1"
+  }
+}

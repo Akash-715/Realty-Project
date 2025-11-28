@@ -1,0 +1,792 @@
+[
+    {
+        "id": "596",
+        "label": "GST Road",
+        "category": "top",
+        "rating": "4.3",
+        "isSelected": false,
+        "value": "596"
+    },
+    {
+        "id": "569",
+        "label": "OMR",
+        "category": "top",
+        "rating": "4.3",
+        "isSelected": false,
+        "value": "569"
+    },
+    {
+        "id": "556",
+        "label": "ECR",
+        "category": "top",
+        "rating": "4.3",
+        "isSelected": false,
+        "value": "556"
+    },
+    {
+        "id": "575",
+        "label": "Tambaram",
+        "category": "top",
+        "rating": "4.3",
+        "isSelected": false,
+        "value": "575"
+    },
+    {
+        "id": "593",
+        "label": "Guduvancheri",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "593"
+    },
+    {
+        "id": "567",
+        "label": "Sholinganallur",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "567"
+    },
+    {
+        "id": "3607",
+        "label": "Padur",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "3607"
+    },
+    {
+        "id": "1131833",
+        "label": "Kelambakkam",
+        "category": "more",
+        "rating": 3.6,
+        "isSelected": false,
+        "value": "1131833"
+    },
+    {
+        "id": "15738",
+        "label": "West Tambaram",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "15738"
+    },
+    {
+        "id": "566",
+        "label": "Medavakkam",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "566"
+    },
+    {
+        "id": "628",
+        "label": "Pallikaranai",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "628"
+    },
+    {
+        "id": "687",
+        "label": "Navalur",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "687"
+    },
+    {
+        "id": "629",
+        "label": "Perungudi",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "629"
+    },
+    {
+        "id": "647",
+        "label": "Thoraipakkam",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "647"
+    },
+    {
+        "id": "3739",
+        "label": "Thiruporur",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "3739"
+    },
+    {
+        "id": "562",
+        "label": "Madipakkam",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "562"
+    },
+    {
+        "id": "3667",
+        "label": "Kundrathur",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "3667"
+    },
+    {
+        "id": "6525",
+        "label": "Perumbakkam",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "6525"
+    },
+    {
+        "id": "5728",
+        "label": "Siruseri",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "5728"
+    },
+    {
+        "id": "694",
+        "label": "Thalambur",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "694"
+    },
+    {
+        "id": "3694",
+        "label": "Oragadam",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "3694"
+    },
+    {
+        "id": "574",
+        "label": "Velachery",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "574"
+    },
+    {
+        "id": "581",
+        "label": "Maraimalai Nagar",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "581"
+    },
+    {
+        "id": "643",
+        "label": "Singaperumal koil",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "643"
+    },
+    {
+        "id": "6510",
+        "label": "Mannivakkam",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "6510"
+    },
+    {
+        "id": "578",
+        "label": "T Nagar",
+        "category": "more",
+        "rating": 4.4,
+        "isSelected": false,
+        "value": "578"
+    },
+    {
+        "id": "625",
+        "label": "Manapakkam",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "625"
+    },
+    {
+        "id": "654",
+        "label": "Urapakkam",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "654"
+    },
+    {
+        "id": "668",
+        "label": "East Tambaram",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "668"
+    },
+    {
+        "id": "630",
+        "label": "Padappai",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "630"
+    },
+    {
+        "id": "692",
+        "label": "Perungalathur",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": true,
+        "value": "692"
+    },
+    {
+        "id": "576",
+        "label": "Thiruvanmiyur",
+        "category": "more",
+        "rating": 4.4,
+        "isSelected": false,
+        "value": "576"
+    },
+    {
+        "id": "5934",
+        "label": "Pudupakkam Village",
+        "category": "more",
+        "rating": 3.7,
+        "isSelected": false,
+        "value": "5934"
+    },
+    {
+        "id": "15536",
+        "label": "Thaiyur",
+        "category": "more",
+        "rating": 3.4,
+        "isSelected": false,
+        "value": "15536"
+    },
+    {
+        "id": "548",
+        "label": "Adyar",
+        "category": "more",
+        "rating": 4.4,
+        "isSelected": false,
+        "value": "548"
+    },
+    {
+        "id": "6476",
+        "label": "Ponmar",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "6476"
+    },
+    {
+        "id": "579",
+        "label": "Pallavaram",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "579"
+    },
+    {
+        "id": "656",
+        "label": "Vandalur",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "656"
+    },
+    {
+        "id": "563",
+        "label": "Mahabalipuram",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "563"
+    },
+    {
+        "id": "6029",
+        "label": "Madambakkam",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "6029"
+    },
+    {
+        "id": "15056",
+        "label": "Kandigai",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "15056"
+    },
+    {
+        "id": "674",
+        "label": "Injambakkam",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "674"
+    },
+    {
+        "id": "3679",
+        "label": "Mudichur",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "3679"
+    },
+    {
+        "id": "626",
+        "label": "Neelankarai",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "626"
+    },
+    {
+        "id": "3660",
+        "label": "Keelkattalai",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "3660"
+    },
+    {
+        "id": "631",
+        "label": "Pammal",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "631"
+    },
+    {
+        "id": "564",
+        "label": "Mylapore",
+        "category": "more",
+        "rating": 4.4,
+        "isSelected": false,
+        "value": "564"
+    },
+    {
+        "id": "681",
+        "label": "Mambakkam",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "681"
+    },
+    {
+        "id": "638",
+        "label": "Sithalapakkam",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "638"
+    },
+    {
+        "id": "555",
+        "label": "Guindy",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "555"
+    },
+    {
+        "id": "3804",
+        "label": "Karapakkam",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "3804"
+    },
+    {
+        "id": "587",
+        "label": "Selaiyur",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "587"
+    },
+    {
+        "id": "5933",
+        "label": "Potheri",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "5933"
+    },
+    {
+        "id": "545",
+        "label": "Adambakkam",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "545"
+    },
+    {
+        "id": "558",
+        "label": "Chromepet",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "558"
+    },
+    {
+        "id": "3011",
+        "label": "Uthandi",
+        "category": "more",
+        "rating": 3.6,
+        "isSelected": false,
+        "value": "3011"
+    },
+    {
+        "id": "3753",
+        "label": "Vengaivasal",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "3753"
+    },
+    {
+        "id": "1132466",
+        "label": "Semmancheri",
+        "category": "more",
+        "rating": 3.6,
+        "isSelected": false,
+        "value": "1132466"
+    },
+    {
+        "id": "573",
+        "label": "Kodambakkam",
+        "category": "more",
+        "rating": 4.4,
+        "isSelected": false,
+        "value": "573"
+    },
+    {
+        "id": "3603",
+        "label": "New perungalathur",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "3603"
+    },
+    {
+        "id": "3746",
+        "label": "Vadapalani",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "3746"
+    },
+    {
+        "id": "570",
+        "label": "Nanganallur",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "570"
+    },
+    {
+        "id": "3927",
+        "label": "Siruseri Sipcot IT Park",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "3927"
+    },
+    {
+        "id": "554",
+        "label": "Besant Nagar",
+        "category": "more",
+        "rating": 4.4,
+        "isSelected": false,
+        "value": "554"
+    },
+    {
+        "id": "5725",
+        "label": "Mahindra City",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "5725"
+    },
+    {
+        "id": "476",
+        "label": "Alwarpet",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "476"
+    },
+    {
+        "id": "6500",
+        "label": "Kanathur",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "6500"
+    },
+    {
+        "id": "27153",
+        "label": "Kayarambedu",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "27153"
+    },
+    {
+        "id": "559",
+        "label": "Kottivakkam",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "559"
+    },
+    {
+        "id": "627",
+        "label": "Palavakkam",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "627"
+    },
+    {
+        "id": "632",
+        "label": "Panayur",
+        "category": "more",
+        "rating": 3.7,
+        "isSelected": false,
+        "value": "632"
+    },
+    {
+        "id": "688",
+        "label": "Nanmangalam",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "688"
+    },
+    {
+        "id": "552",
+        "label": "Akkarai",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "552"
+    },
+    {
+        "id": "571",
+        "label": "RA Puram",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "571"
+    },
+    {
+        "id": "633",
+        "label": "Rajakilpakkam",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "633"
+    },
+    {
+        "id": "34947",
+        "label": "Mappedu",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "34947"
+    },
+    {
+        "id": "3701",
+        "label": "Pozhichallur",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "3701"
+    },
+    {
+        "id": "4122",
+        "label": "Manimangalam",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "4122"
+    },
+    {
+        "id": "6022",
+        "label": "Vandalur Kelambakkam Road",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "6022"
+    },
+    {
+        "id": "18788",
+        "label": "Thirukalukundram",
+        "category": "more",
+        "rating": 3.6,
+        "isSelected": false,
+        "value": "18788"
+    },
+    {
+        "id": "620",
+        "label": "Kovilambakkam",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "620"
+    },
+    {
+        "id": "585",
+        "label": "Saidapet",
+        "category": "more",
+        "rating": 4.3,
+        "isSelected": false,
+        "value": "585"
+    },
+    {
+        "id": "6030",
+        "label": "Muttukadu",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "6030"
+    },
+    {
+        "id": "683",
+        "label": "Kovalam",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "683"
+    },
+    {
+        "id": "10318",
+        "label": "Puzhuthivakkam",
+        "category": "more",
+        "rating": 3.7,
+        "isSelected": false,
+        "value": "10318"
+    },
+    {
+        "id": "1132692",
+        "label": "Vengambakkam",
+        "category": "more",
+        "isSelected": false,
+        "value": "1132692"
+    },
+    {
+        "id": "3710",
+        "label": "Santhosapuram",
+        "category": "more",
+        "rating": 4.2,
+        "isSelected": false,
+        "value": "3710"
+    },
+    {
+        "id": "6552",
+        "label": "Anakaputhur",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "6552"
+    },
+    {
+        "id": "553",
+        "label": "Ashok Nagar",
+        "category": "more",
+        "rating": 4.4,
+        "isSelected": false,
+        "value": "553"
+    },
+    {
+        "id": "610",
+        "label": "Kattankulathur",
+        "category": "more",
+        "rating": 3.9,
+        "isSelected": false,
+        "value": "610"
+    },
+    {
+        "id": "3635",
+        "label": "Chitlapakkam",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "3635"
+    },
+    {
+        "id": "3711",
+        "label": "Sembakkam",
+        "category": "more",
+        "rating": 4.1,
+        "isSelected": false,
+        "value": "3711"
+    },
+    {
+        "id": "14224",
+        "label": "Old Perungalathur",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "14224"
+    },
+    {
+        "id": "30709",
+        "label": "Keerapakkam",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "30709"
+    },
+    {
+        "id": "5938",
+        "label": "Rathinamangalam",
+        "category": "more",
+        "rating": 3.8,
+        "isSelected": false,
+        "value": "5938"
+    },
+    {
+        "id": "1109561",
+        "label": "Urapakkam West",
+        "category": "more",
+        "rating": 4,
+        "isSelected": false,
+        "value": "1109561"
+    },
+    {
+        "id": "1132102",
+        "label": "Nandivaram",
+        "category": "more",
+        "isSelected": false,
+        "value": "1132102"
+    },
+    {
+        "id": "5914",
+        "label": "Egattur",
+        "category": "more",
+        "rating": 3.7,
+        "isSelected": false,
+        "value": "5914"
+    },
+    {
+        "id": "20543",
+        "label": "Varadharajapuram",
+        "category": "more",
+        "rating": 3.5,
+        "isSelected": false,
+        "value": "20543"
+    }
+]

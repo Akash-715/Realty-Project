@@ -1,0 +1,104 @@
+body{
+    background-color: rgba(239, 241, 249);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 25% 74% ;
+    height: 100vh;
+    gap: 20px;
+    padding: 10px;
+}
+
+.Selection_block {
+    margin-top: 100px;
+    height: 100vh;
+    border: solid rgb(255, 255, 255);
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(184, 183, 183);
+}
+
+.Table_block{
+    margin-top: 100px;
+    border: solid rgb(255, 255, 255);
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(184, 183, 183);
+
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #ccc
+}
+
+.table-content{
+    font-size: 0.9em;
+    border-radius: 15px;
+    border-collapse: collapse;
+}
+
+
+.Filter_field{
+    padding-left: 10px;
+}
+
+
+.PriceRange , .ppsqftRange , .AreaInput label{
+    padding-left: 15px;
+}
+
+.RangeInputs{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 25px; 
+}
+
+.AreaRange{
+     display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 25px; 
+}
+
+.AreaRange input{
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+}
+
+.reraInput input{
+    padding: 5px;
+    margin-left: 25px;
+    margin-top: 8px;
+}
+
+.RangeInputs input{
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+#dash {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.locationFields , .SourceInput {
+    margin-left: 25px;
+    width: 200px;
+}
+
+.buttonDiv button{
+    margin: 20px;
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(135deg, #5266e5, #4c4eab);  
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
