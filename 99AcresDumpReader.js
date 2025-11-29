@@ -68,6 +68,7 @@ const properties = dumpData.map((p) => {
     minPrice: p.MIN_PRICE,
     maxPrice: p.MAX_PRICE,
     avgPrice: p.FORMATTED?.AVG_PRICE,
+    propertyType: p.PROPERTY_TYPE,
     pricePerSqft: `${p.PRICE_SQFT} K/sq.ft` || "N/A",
     areaSqft: p.AREA || "N/A",
     Location: p.LOCALITY || "N/A",

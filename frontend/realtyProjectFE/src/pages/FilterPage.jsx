@@ -14,6 +14,7 @@ import AreasqftComponent from './Components/AreasqftComponent';
 import SourceComponent from './Components/SourceComponent';
 import ReraComponent from './Components/ReraComponent';
 import BsComponent from './Components/BsComponent';
+import PropTypeComponent from './Components/PropTypeComponent';
 
 
 
@@ -38,7 +39,8 @@ function FilterPage(){
         area: false,
         source: false,
         rera: false,
-        bs: false
+        bs: false,
+        propType: false
     });
 
 
@@ -56,7 +58,8 @@ function FilterPage(){
         minAreaSqFt:"",
         maxAreaSqFt:"",
         reraValue: "",
-        buildingStatus: ""
+        buildingStatus: "",
+        propertyType: []
     })
 
     const [storeData , setStoreData] = useState([]);
@@ -82,7 +85,11 @@ function FilterPage(){
         let params = new URLSearchParams();
 
         Object.entries(filters).forEach(([key , value]) => {
-            if(value !== "" && value !== null && value !== undefined){
+
+            if(Array.isArray(value)){
+                value.forEach(v => params.append(key ,v));
+            }
+            else if(value !== "" && value !== null && value !== undefined){
                 params.append(key , value);
             }
         })
@@ -127,13 +134,11 @@ function FilterPage(){
                 <div className='Filter_field'>
                     <p>Filter By Fields</p>
 
+                <PropTypeComponent enableFilters = {enableFilters} showFilters = {showFilters} 
+                setFilters = {setFilters} />
                     
                 <PriceComponent  enableFilters={enableFilters} showFilters={showFilters}
                 handleFilters={handleFilters} filters={filters} />
-
-                <LocationComponent enableFilters={enableFilters} options={options} 
-                selectedOption={selectedOption} showFilters={showFilters} 
-                setSelectedOption={setSelectedOption} />
 
                 <PPsqftComponent enableFilters={enableFilters} showFilters={showFilters}
                 filters={filters} handleFilters={handleFilters} />
@@ -141,14 +146,18 @@ function FilterPage(){
                 <AreasqftComponent enableFilters={enableFilters} showFilters={showFilters}
                 filters={filters} handleFilters={handleFilters} />
 
-                <SourceComponent enableFilters={enableFilters} sourceOptions={sourceOptions}
-                source={source} setSource={setSource} showFilters={showFilters} />
-
                 <ReraComponent enableFilters={enableFilters} showFilters={showFilters}
                 filters={filters} setFilters={setFilters} />
 
                 <BsComponent enableFilters={enableFilters} showFilters={showFilters}
                 setFilters={setFilters} />
+
+                <LocationComponent enableFilters={enableFilters} options={options} 
+                selectedOption={selectedOption} showFilters={showFilters} 
+                setSelectedOption={setSelectedOption} />
+
+                <SourceComponent enableFilters={enableFilters} sourceOptions={sourceOptions}
+                source={source} setSource={setSource} showFilters={showFilters} />
 
                 {/* Submit Button */}
                 <div className='buttonDiv'>

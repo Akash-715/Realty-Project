@@ -56,11 +56,11 @@ async function storeData(){
 
   await pool.query(
     `INSERT INTO propertyData (
-      url, Title, Description, minPrice, maxPrice, avgPrice, pricePerSqft,
+      url, Title, Description, minPrice, maxPrice, avgPrice,propertyType, pricePerSqft,
       areaSqft, Location, city, LongAddress, BuildingStatus, ReraStatus,
       Bedroom, Bathroom, Furnishing, Latitude, Longitude, Source , ppSqFtNum ,
       minAreaSqFt , maxAreaSqFt
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ? , ?)`,
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ? , ? , ?)`,
     [
       p.url,
       p.title,
@@ -68,6 +68,7 @@ async function storeData(){
       p.minPrice,
       p.maxPrice,
       p.avgPrice,
+      p.propertyType,
       p.pricePerSqft,
       p.areaSqft,
       p.Location,

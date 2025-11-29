@@ -18,6 +18,7 @@ function TableComponent({ storeData }){
                             <th>Minimum Price</th>
                             <th>Maximum Price</th>
                             <th>Average Price</th>
+                            <th>Property Type</th>
                             <th>ppSqFt</th>
                             <th>AreaSqFt</th>
                             <th>Location</th>
@@ -43,6 +44,7 @@ function TableComponent({ storeData }){
                                 <td>{data.minPrice}</td>
                                 <td>{data.maxPrice}</td>
                                 <td>{data.avgPrice}</td>
+                                <td>{data.propertyType}</td>
                                 <td>{data.pricePersqft}</td>
                                 <td>{data.areaSqft}</td>
                                 <td>{data.Location}</td>

@@ -50,7 +50,7 @@ export async function filter(filters){
 
     //source filter
     if(filters.source){
-        query += ` AND Source like ? `;
+        query += ` AND Source  LIKE ? `;
 
         params.push(`%${filters.source}%`);
     }
@@ -67,6 +67,13 @@ export async function filter(filters){
         query += 'AND BuildingStatus like ?';
 
         params.push(`%${filters.buildingStatus}%`);
+    }
+
+    //PropertyType
+    if(filters.propertyType){
+        query += ` AND ${filters.propertyType.map(() => 'propertyType LIKE ?').join(' OR ')}`;
+
+        params.push(...filters.propertyType.map( v => `%${v}%` ));
     }
 
     const [rows] = await pool.query(query , params);
