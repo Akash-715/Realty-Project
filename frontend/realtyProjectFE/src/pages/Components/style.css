@@ -55,6 +55,9 @@
 .pageContainer{
     display: flex;
     flex-direction: row;
+    
+    align-items: center;
+
 }
 
 .pageContainer button{
@@ -65,6 +68,8 @@
     cursor: pointer;
     font-weight: 600;
     box-shadow: 1px 1px 1px 2px #717070 ;
+
+    min-width: 40px;
 }
 
 .pageContainer button.active{

@@ -14,9 +14,9 @@ export async function filter(filters){
 
     //price filter
     if(filters.minValue && filters.maxValue){
-        query += `AND (maxPrice = 0 AND minPrice BETWEEN ? AND ?)
+        query += `AND ((maxPrice = 0 AND minPrice BETWEEN ? AND ?)
                     OR 
-                    ( maxPrice > 0 AND minPrice >= ? AND maxPrice <= ?)`;
+                    ( maxPrice > 0 AND minPrice >= ? AND maxPrice <= ?))`;
 
         params.push(Number(filters.minValue) , Number(filters.maxValue) , Number(filters.minValue) , Number(filters.maxValue));
         
@@ -70,12 +70,64 @@ export async function filter(filters){
     }
 
     //PropertyType
-    if(filters.propertyType){
-        query += ` AND ${filters.propertyType.map(() => 'propertyType LIKE ?').join(' OR ')}`;
+    if (filters.propertyType) {
+    if (!Array.isArray(filters.propertyType)) filters.propertyType = [filters.propertyType];
 
-        params.push(...filters.propertyType.map( v => `%${v}%` ));
+    filters.propertyType = filters.propertyType.filter(v => v && v.trim() !== "");
+
+    if (filters.propertyType.length > 0) {
+        query += ` AND ( ${filters.propertyType
+            .map(() => 'TRIM(propertyType) LIKE ?')
+            .join(' OR ')} )`;
+
+        params.push(...filters.propertyType.map(v => `%${v}%`));
+        }
     }
+
+
+    //Furnishing
+    if(filters.furnishing){
+        query += ' AND furnishing LIKE ? ';
+
+        params.push(`${filters.furnishing}`);
+    }
+
+    //Bedroom
+    if (filters.bedroom) {
+    if (!Array.isArray(filters.bedroom)) filters.bedroom = [filters.bedroom];
+
+    if (filters.bedroom.length > 0) {
+        query += ` AND ( ${filters.bedroom
+            .map(n => (n > 3 ? 'Bedroom >= ?' : 'Bedroom = ?'))
+            .join(' OR ')} )`;
+
+        params.push(...filters.bedroom.map(n => n));
+        }
+    }
+
+
+    //Bathroom
+    if (filters.bathroom) {
+    if (!Array.isArray(filters.bathroom)) filters.bathroom = [filters.bathroom];
+
+    if (filters.bathroom.length > 0) {
+        query += ` AND ( ${filters.bathroom
+            .map(n => (n > 3 ? 'Bathroom >= ?' : 'Bathroom = ?'))
+            .join(' OR ')} )`;
+
+        params.push(...filters.bathroom.map(n => n));
+        }
+    }
+
+    
+
+    if(params.length > 0){
+
+        console.log(query)
+        console.log(params);
 
     const [rows] = await pool.query(query , params);
     return rows;
+    }
+
 }

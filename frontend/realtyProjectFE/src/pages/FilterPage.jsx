@@ -15,6 +15,9 @@ import SourceComponent from './Components/SourceComponent';
 import ReraComponent from './Components/ReraComponent';
 import BsComponent from './Components/BsComponent';
 import PropTypeComponent from './Components/PropTypeComponent';
+import FurnishingComponent from './Components/FurnishingComponent';
+import BedroomInputComponent from './Components/BedroomInputComponent';
+import BathroomInputComponent from './Components/BathroomInputComponent';
 
 
 
@@ -40,7 +43,10 @@ function FilterPage(){
         source: false,
         rera: false,
         bs: false,
-        propType: false
+        propType: false,
+        furnishing: false,
+        bedroom: false,
+        bathroom: false
     });
 
 
@@ -59,7 +65,10 @@ function FilterPage(){
         maxAreaSqFt:"",
         reraValue: "",
         buildingStatus: "",
-        propertyType: []
+        propertyType: [],
+        furnishing: "",
+        bedroom:[],
+        bathroom:[]
     })
 
     const [storeData , setStoreData] = useState([]);
@@ -152,6 +161,15 @@ function FilterPage(){
                 <BsComponent enableFilters={enableFilters} showFilters={showFilters}
                 setFilters={setFilters} />
 
+                <FurnishingComponent enableFilters = {enableFilters} showFilters = {showFilters}
+                 setFilters = {setFilters} />
+
+                <BedroomInputComponent enableFilters = {enableFilters} showFilters = {showFilters}  
+                setFilters = {setFilters}/>
+
+                <BathroomInputComponent enableFilters={enableFilters} showFilters={showFilters}
+                setFilters={setFilters} />
+
                 <LocationComponent enableFilters={enableFilters} options={options} 
                 selectedOption={selectedOption} showFilters={showFilters} 
                 setSelectedOption={setSelectedOption} />
@@ -172,17 +190,22 @@ function FilterPage(){
                 {storeData.length > 0 ?(
                     <div>
                     <TableComponent storeData = {currentRows} />
+                    </div>
+                ): (
+                <p></p>
+            ) }                                 
+            </div>
 
+            <div className='page_block'>
+                {storeData.length > 0 ? (
                     <Pagination
                      totalPage = {storeData.length} 
                      rowsPerPage = {rowsPerPage}
                      setCurrentPage={setCurrentPage}
                      currentPage={currentPage}/>
-                    </div>
                 ): (
-                <p></p>
-            ) }
-                                              
+                    <p></p>
+                )}
             </div>
         </div>
     );

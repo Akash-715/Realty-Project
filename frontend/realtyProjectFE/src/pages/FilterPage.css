@@ -17,6 +17,8 @@ body{
     border-radius: 15px;
     background-color: white;
     box-shadow: 1px 1px 1px 1px rgb(184, 183, 183);
+
+    overflow-y: auto;
 }
 
 .Table_block{
@@ -40,6 +42,10 @@ body{
 
 .Filter_field{
     padding-left: 10px;
+}
+
+.Filter_field input{
+    margin: 10px;
 }
 
 
@@ -74,15 +80,42 @@ body{
 }
 
 .bsInput{
+    padding: 3px;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+.furnishingInput{
+    padding: 3px;
+    margin-left: 15px;
+}
+
+.furnishingInput input{
+    margin: 5px;
+}
+
+.bedroomInput{
     padding: 5px;
     margin-left: 15px;
-    margin-top: 4px;
+    margin-top: 2px
+}
+
+.bedroomInput p{
+    margin: 0%
+}
+
+.bedroomInput input{
+    margin: 7px;
 }
 
 .propTypeInput{
-    padding: 5px;
-    margin-left: 15px;
-    margin-top: 4px;
+    padding: 3px;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+.propTypeInput input{
+    margin: 6px;
 }
 
 .RangeInputs input{
@@ -111,6 +144,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
+
 
 
 
