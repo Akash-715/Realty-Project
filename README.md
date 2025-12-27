@@ -1,105 +1,102 @@
-Realty Data Aggregation & Filtering Platform
+# Realty Data Aggregation & Filtering Platform
 
-A full-stack real estate data platform that scrapes property listings from multiple real estate websites, normalizes the data into a unified structure, and provides an advanced filtering system using React for easy property discovery.
+A **full-stack real estate data platform** that scrapes property listings from multiple real estate websites, normalizes fragmented data into a **unified structure**, and provides an **advanced filtering system** using React for seamless property discovery.
 
-This project focuses on solving the problem of fragmented and inconsistent real estate data across platforms.
+This project addresses the major problem of **inconsistent and scattered real estate data across different platforms** by aggregating, standardizing, and serving it through a single interface.
 
+---
 
-Features:
+##  Key Features
 
-Web Scraping:
+### Web Scraping
+- Scrapes property listings from **multiple real estate websites**
+- Handles both **static and dynamic content**
+- Extracts key attributes:
+  - Price
+  - Area
+  - Location
+  - Configuration
+  - Property type
 
-Scrapes real estate listings from multiple property websites
+---
 
-Handles both static and dynamic content
+### Data Normalization
+- Converts **unstructured scraped data** into a standardized JSON schema
+- Ensures consistency across all data sources
 
-Extracts key property attributes like price, area, location, and configuration
+#### Normalized Fields:
+- `minPrice`
+- `maxPrice`
+- `avgPrice`
+- `pricePerSqft`
+- `areaSqft`
+- `location`
+- `propertyType`
+- `sourceWebsite`
 
+---
 
-Data Normalization:
+### Backend Filtering API
+- Stores structured data in **MySQL**
+- Exposes optimized **REST APIs**
+- Supports **multi-parameter filtering**:
+  - Budget range
+  - Area range
+  - Location
+  - Property type
+- Optimized SQL queries for **fast filtering performance**
 
-Converts unstructured scraped data into a standardized JSON format
+---
 
+### React Frontend
+- Interactive UI built with **React**
+- Dynamic filters with **real-time updates**
+- Clean and readable **property cards**
+- Fully **responsive and user-friendly** design
 
-Normalized fields such as:
+---
 
-minPrice, maxPrice, avgPrice
+## Tech Stack
 
-pricePerSqft
+### Frontend
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="45" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="45" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="45" />
+</p>
 
-areaSqft
+### Backend
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="45" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" width="45" />
+</p>
 
-location
+### Web Scraping
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/puppeteer/puppeteer-original.svg" width="45" />
+</p>
 
-propertyType
+### Database
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="45" />
+</p>
 
-sourceWebsite
+---
 
+##  Data Flow Architecture
 
-Backend Filtering API:
+1. Scrape property listings from multiple real estate websites  
+2. Normalize raw scraped data into a unified schema  
+3. Store cleaned data in MySQL  
+4. Backend exposes filtering APIs  
+5. React frontend consumes APIs and renders filtered results  
 
-Stores structured data in a database (MySQL)
+---
 
-Supports multi-parameter filtering:
+## Project Highlights
+- End-to-end **data pipeline** (Scraping → Normalization → Storage → API → UI)
+- Designed for **scalability and extensibility**
+- Clean separation of concerns between frontend, backend, and scraping layers
 
-Budget range
+---
 
-Area range
-
-Location
-
-Property type
-
-Optimized queries for faster filtering
-
- 
- React Frontend:
-
-Interactive UI built with React
-
-Dynamic filters with real-time updates
-
-Clean property cards for easy comparison
-
-User-friendly and responsive design
-
-
-Tech Stack:
-Frontend
-
-React.js
-
-JavaScript (ES6+)
-
-CSS / Tailwind (if applicable)
-
-Backend
-
-Node.js
-
-Express.js
-
-REST APIs
-
-Scraping
-
-Puppeteer (for dynamic pages)
-
-Cheerio / Axios (for static pages)
-
-
-Database:
-MySQLs and renders filtered results
-
-
-Data Flow:
-
-Scrape property listings from real estate websites
-
-Normalize raw data into a unified schema
-
-Store cleaned data in MySQL
-
-Backend exposes filtering APIs
-
-React frontend consumes APIs and renders filtered results
