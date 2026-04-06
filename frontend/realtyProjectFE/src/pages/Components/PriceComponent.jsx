@@ -1,6 +1,11 @@
 import '../FilterPage.css';
 
-export default  function PriceComponent({enableFilters , showFilters , handleFilters , filters}){
+import { useFilter } from '../../context/FilterContext';
+
+export default  function PriceComponent(){
+
+    const {enableFilters , showFilters , handleFilters , filters} = useFilter();
+
     return(
         <div>
             <input type='checkbox' id = 'priceInputs'  onChange={() => enableFilters('price')}/>

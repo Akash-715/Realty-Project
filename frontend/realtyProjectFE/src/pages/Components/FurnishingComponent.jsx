@@ -1,6 +1,10 @@
 import '../FilterPage.css';
+import { useFilter } from '../../context/FilterContext';
 
-export default function FurnishingComponent({enableFilters , showFilters , setFilters}){
+export default function FurnishingComponent(){
+
+    const {enableFilters, showFilters, setFilters} = useFilter()
+
     return(
         <div>
             <input type='checkbox' id='furnishingInput' onChange={() => enableFilters('furnishing')} />

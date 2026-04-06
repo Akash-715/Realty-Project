@@ -1,9 +1,9 @@
-import {React , useState } from 'react';
-import Select from 'react-select';
-
+import React, { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
 
 import './FilterPage.css';
-import axios from 'axios';
+
+import { FilterContext } from '../context/FilterContext';
 
 import TableComponent from './Components/TableComponent';
 import Pagination from './Components/Pagination';
@@ -18,197 +18,73 @@ import PropTypeComponent from './Components/PropTypeComponent';
 import FurnishingComponent from './Components/FurnishingComponent';
 import BedroomInputComponent from './Components/BedroomInputComponent';
 import BathroomInputComponent from './Components/BathroomInputComponent';
-
-
+import { useContext } from 'react';
 
 const options = [
-    {value: 'Perungalathur' , label: 'Perungalathur'},
-    {value: 'Urapakkam' , label: 'Urapakkam'},
-    {value: 'Vandalur' , label: 'Vandalur'}
-]
+    { value: 'Perungalathur', label: 'Perungalathur' },
+    { value: 'Urapakkam', label: 'Urapakkam' },
+    { value: 'Vandalur', label: 'Vandalur' }
+];
 
 const sourceOptions = [
-    {value:'99acres' , label: '99acres'},
-    {value:'housing' , label: 'housing.com'}
-]
+    { value: '99acres', label: '99acres' },
+    { value: 'housing', label: 'housing.com' }
+];
 
+function FilterPage() {
 
-function FilterPage(){
+    const {
+        storeData,
+        currentPage,
+        setCurrentPage,
+        rowsPerPage,
+        handleApplyFilter,
+        currentRows
+    } = useContext(FilterContext)
 
-    const [showFilters , setShowFilters] = useState({
-        price: false ,
-        location: false ,
-        PPsqFt: false,
-        area: false,
-        source: false,
-        rera: false,
-        bs: false,
-        propType: false,
-        furnishing: false,
-        bedroom: false,
-        bathroom: false
-    });
-
-
-    const [selectedOption , setSelectedOption] = useState(null);
-    const [source , setSource] = useState(null);
-
-    const [currentPage , setCurrentPage] = useState(1);
-    const [rowsPerPage , setRowsPerPage] = useState(50);
-
-    const [filters , setFilters] = useState({
-        minValue: "",
-        maxValue: "",
-        minPP:"",
-        maxPP:"",
-        minAreaSqFt:"",
-        maxAreaSqFt:"",
-        reraValue: "",
-        buildingStatus: "",
-        propertyType: [],
-        furnishing: "",
-        bedroom:[],
-        bathroom:[]
-    })
-
-    const [storeData , setStoreData] = useState([]);
-
-   
-    function enableFilters(name){
-        setShowFilters(prev => ({
-            ...prev,
-            [name] : !prev[name]
-        }))
-    }
-
-    function handleFilters(event){
-        const {name , value} = event.target;
-
-        setFilters(prev => ({
-            ...prev,
-            [name]: value
-        }))
-    }
-
-    const bulidQuery = () => {
-        let params = new URLSearchParams();
-
-        Object.entries(filters).forEach(([key , value]) => {
-
-            if(Array.isArray(value)){
-                value.forEach(v => params.append(key ,v));
-            }
-            else if(value !== "" && value !== null && value !== undefined){
-                params.append(key , value);
-            }
-        })
-
-        if(selectedOption){
-            const locationValue = selectedOption.value || selectedOption; 
-            params.append("location" , locationValue);
-        }
-        if(source){
-            const sourceValue = source.value || source;
-            params.append("source" , sourceValue);
-        }
-
-        return params.toString();
-    }
-
-    
-    async function handleClick(event){
-        try{
-            event.preventDefault();
-            const params = bulidQuery();
-
-            const response = await axios.get(`http://localhost:8080/filter/?${params}`);
-
-            setStoreData(response.data);
-
-
-        }catch(e){
-            console.log(e);
-    }
-}
-        //Pagination logic
-        const LastRowIndex = currentPage * rowsPerPage;
-        const FirstRowIndex = LastRowIndex - rowsPerPage;
-        const currentRows = storeData.slice(FirstRowIndex , LastRowIndex);
-
-
-    return(
+    return (
         <div className='container'>
             <div className='Selection_block'>
-
                 <div className='Filter_field'>
                     <p>Filter By Fields</p>
 
-                <PropTypeComponent enableFilters = {enableFilters} showFilters = {showFilters} 
-                setFilters = {setFilters} />
-                    
-                <PriceComponent  enableFilters={enableFilters} showFilters={showFilters}
-                handleFilters={handleFilters} filters={filters} />
+                    <PropTypeComponent />
+                    <PriceComponent />
+                    <PPsqftComponent />
+                    <AreasqftComponent />
+                    <ReraComponent />
+                    <BsComponent />
+                    <FurnishingComponent />
+                    <BedroomInputComponent />
+                    <BathroomInputComponent />
 
-                <PPsqftComponent enableFilters={enableFilters} showFilters={showFilters}
-                filters={filters} handleFilters={handleFilters} />
+                    <LocationComponent />
+                    <SourceComponent />
 
-                <AreasqftComponent enableFilters={enableFilters} showFilters={showFilters}
-                filters={filters} handleFilters={handleFilters} />
-
-                <ReraComponent enableFilters={enableFilters} showFilters={showFilters}
-                filters={filters} setFilters={setFilters} />
-
-                <BsComponent enableFilters={enableFilters} showFilters={showFilters}
-                setFilters={setFilters} />
-
-                <FurnishingComponent enableFilters = {enableFilters} showFilters = {showFilters}
-                 setFilters = {setFilters} />
-
-                <BedroomInputComponent enableFilters = {enableFilters} showFilters = {showFilters}  
-                setFilters = {setFilters}/>
-
-                <BathroomInputComponent enableFilters={enableFilters} showFilters={showFilters}
-                setFilters={setFilters} />
-
-                <LocationComponent enableFilters={enableFilters} options={options} 
-                selectedOption={selectedOption} showFilters={showFilters} 
-                setSelectedOption={setSelectedOption} />
-
-                <SourceComponent enableFilters={enableFilters} sourceOptions={sourceOptions}
-                source={source} setSource={setSource} showFilters={showFilters} />
-
-                {/* Submit Button */}
-                <div className='buttonDiv'>
-                    <button variant = 'primary' onClick={handleClick}>Apply Filter</button>
+                    <div className='buttonDiv'>
+                        <button onClick={handleApplyFilter}>
+                            Apply Filter
+                        </button>
+                    </div>
                 </div>
-
-                </div>
-
             </div>
 
             <div className='Table_block'>
-                {storeData.length > 0 ?(
-                    <div>
-                    <TableComponent storeData = {currentRows} />
-                    </div>
-                ): (
-                <p></p>
-            ) }                                 
+                {storeData.length > 0 && <TableComponent storeData={currentRows} />}
             </div>
 
             <div className='page_block'>
-                {storeData.length > 0 ? (
+                {storeData.length > 0 && (
                     <Pagination
-                     totalPage = {storeData.length} 
-                     rowsPerPage = {rowsPerPage}
-                     setCurrentPage={setCurrentPage}
-                     currentPage={currentPage}/>
-                ): (
-                    <p></p>
+                        totalPage={storeData.length}
+                        rowsPerPage={rowsPerPage}
+                        setCurrentPage={setCurrentPage}
+                        currentPage={currentPage}
+                    />
                 )}
             </div>
         </div>
     );
-};
+}
 
 export default FilterPage;

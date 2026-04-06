@@ -1,6 +1,11 @@
 import '../FilterPage.css';
 
-export default function BathroomInputComponent({enableFilters , showFilters , setFilters}){
+import { useFilter } from '../../context/FilterContext';
+
+export default function BathroomInputComponent(){
+
+    const {enableFilters, showFilters, setFilters} = useFilter();
+
     return(
         <div> 
             <input type='checkbox' id='bedroomInput' onChange={() => enableFilters('bathroom')} />

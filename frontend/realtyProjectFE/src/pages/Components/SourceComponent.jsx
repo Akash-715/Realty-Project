@@ -1,7 +1,11 @@
+import { useFilter } from '../../context/FilterContext';
 import '../FilterPage.css';
 import Select from 'react-select';
 
-export default function SourceComponent({enableFilters , showFilters , sourceOptions ,source , setSource}){
+export default function SourceComponent(){
+
+    const {enableFilters , showFilters , sourceOptions ,source , setSource} = useFilter();
+
     return(
         <div>
              <input type='checkbox' id='sourceInput' onChange={() => enableFilters('source')} />

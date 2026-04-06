@@ -1,6 +1,11 @@
 import '../FilterPage.css';
 
-export default function PPsqftComponent({enableFilters , showFilters , handleFilters , filters}){
+import { useFilter } from '../../context/FilterContext';
+
+export default function PPsqftComponent(){
+
+    const {enableFilters , showFilters , handleFilters , filters} = useFilter();
+
     return(
         <div>
             <input type= 'checkbox' id = 'ppsqftInput' onChange={() => enableFilters('PPsqFt')} />

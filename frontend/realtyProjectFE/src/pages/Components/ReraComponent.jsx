@@ -1,6 +1,10 @@
+import { useFilter } from '../../context/FilterContext';
 import '../FilterPage.css';
 
-export default function ReraComponent({enableFilters , showFilters , filters , setFilters}){
+export default function ReraComponent(){
+
+    const {enableFilters , showFilters , filters , setFilters} = useFilter();
+
     return(
         <div>
              <input type='checkbox' id='reraInput' onChange={() => enableFilters('rera')} />

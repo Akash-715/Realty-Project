@@ -1,6 +1,10 @@
+import { useFilter } from '../../context/FilterContext';
 import '../FilterPage.css';
 
-export default function PropTypeComponent({enableFilters , showFilters , setFilters}){
+export default function PropTypeComponent(){
+
+    const {enableFilters , showFilters , setFilters} = useFilter();
+
     return(
         <div>
             <input type='checkbox' id='propTypeInput' onChange={() => {enableFilters('propType')}} />

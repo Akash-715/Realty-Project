@@ -1,11 +1,11 @@
 import React from "react";
 import './style.css'
+import { useFilter } from "../../context/FilterContext";
 
 
+function TableComponent(){
 
-
-
-function TableComponent({ storeData }){
+    const {currentRows} = useFilter();
 
     return(
         <div>
@@ -34,7 +34,7 @@ function TableComponent({ storeData }){
                     </thead>
 
                     <tbody>
-                        {storeData.map((data , index) => (
+                        {currentRows.map((data , index) => (
                             <tr key = {index}>
                                 <td>
                                 <a href={data.url} target="_blank" rel="noopener noreferrer">{data.url}</a>

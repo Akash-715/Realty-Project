@@ -1,6 +1,11 @@
 import '../FilterPage.css';
 
-export default function AreasqftComponent({enableFilters ,showFilters , filters , handleFilters}){
+import { useFilter } from '../../context/FilterContext';
+
+export default function AreasqftComponent(){
+
+    const {enableFilters,showFilters,filters,handleFilters} = useFilter()
+
     return(
         <div>
             <input type = 'checkbox' id = 'areaInput' onChange={() => enableFilters('area')} />

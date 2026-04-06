@@ -1,6 +1,10 @@
 import '../FilterPage.css';
+import { useFilter } from '../../context/FilterContext';
 
-export default function BsComponent({enableFilters , showFilters ,setFilters}){
+export default function BsComponent(){
+
+    const {enableFilters, showFilters, setFilters} = useFilter()
+
     return(
         <div>
             <input type='checkbox' id='bsInput' onChange={() => enableFilters('bs')} />

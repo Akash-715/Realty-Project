@@ -55,10 +55,11 @@
 .pageContainer{
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
+    margin-left: 700px;
     align-items: center;
-
 }
+
 
 .pageContainer button{
     margin: 15px;
